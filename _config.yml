@@ -19,3 +19,4 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/zhl.js
+- /js/bj.js
