@@ -1,5 +1,8 @@
-#header
-	height: 200px;
+vendor(prop,args)
+	-webkit-{prop} args
+	-moz-{prop} args
+	{prop} args
+
 
 .bg_content
 	position:fixed;
@@ -7,7 +10,32 @@
 	z-index: -1;
 	width:100%;
 	height:100%;
-#canvas{
+#canvas
 	width:100%;
 	height:100%;
-}
+
+#header
+	width:100%;
+	display:flex;
+	align-items: center;
+#header-left
+	margin-left:2em;
+	order: 1
+	flex: 2
+#header-title a
+	color: #999;
+	text-decoration: none;
+#header-title a:hover
+	text-decoration: none;
+	color: #444;
+#header-right
+	order: 2
+	flex:1
+#header-right a
+	margin-left: 2em;
+	color: #999;
+	text-decoration: none;
+#header-right a:hover
+	color: #444;
+	
+

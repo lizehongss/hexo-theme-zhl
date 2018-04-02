@@ -1,0 +1,19 @@
+<div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="<%- url_for()%>">
+		<%= config.title%>
+	</a>
+	</h1>
+	<% if(theme.subtitle){%>
+	<h2 id="header-subtitle">
+		<a href="<%- url_for()%>"><%= theme.subtitle%></a>
+	</h2>
+		<%}%>
+	</div>
+	<div id="header-right">
+		<% for(var i in theme.menu){ %>
+		<a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+		<% } %>
+	</div>
+</div>
