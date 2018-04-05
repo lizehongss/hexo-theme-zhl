@@ -18,6 +18,14 @@ vendor(prop,args)
 	width:100%;
 	display:flex;
 	align-items: center;
+#content
+	position:fixed
+	align-items:center
+#content-left
+	flex: 2	
+#content-right
+	flex:1
+
 #header-left
 	margin-left:2em;
 	order: 1
@@ -35,7 +43,34 @@ vendor(prop,args)
 	margin-left: 2em;
 	color: #999;
 	text-decoration: none;
+	vendor(transition,background-color 0.3 ease)
 #header-right a:hover
-	color: #444;
-	
+	color: #ffe
+	background-color: #1e1a1a
+#header-title a 
+	font-size: 20px
+	vendor(transition, font-size 0.5s ease-in-out)
+#header-title a:hover
+	font-size 25px
 
+.widget-wrap
+	background-color:#464
+	margin-left: 2em
+	box-shadow: 10px 10px 5px #888888
+.widget-title
+	color: #994
+		
+.widget ul
+	list-style: none
+.widget ul li
+	border-bottom: 1px solid #000
+	margin-left: -1em
+.widget ul li a
+	color: #999 
+	text-decoration: none
+.widget ul li span:before
+	content: '(' 
+.widget ul li span:after
+	content: ')'
+.widget ul li span
+	color: #999

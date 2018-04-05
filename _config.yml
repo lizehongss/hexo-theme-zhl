@@ -2,21 +2,31 @@
 # html lang
 language: en
 
-# main menu navigation
+# main menu navigation 导航菜单显示
 menu:
   Home: /
+  demo: https://github.com/lizehongss/demo_show
   About: /about
-  Contact: /contact
-  Archives: /archives
+  music: /
 
+# Sidebar 侧栏分类
+# sidebar 左右
+widgets:
+- category ##文章分类
+- tagcloud ##标签 
+- archives ##文章归档
+
+# widget behavioe
+
+show_count: true ##显示分类文章数目
 # Miscelaneous
 favicon: /favicon.ico
 
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/zhl.css
+- /css/zhl.css ## 自定义样式，会覆盖 
 
 # scripts loaded in the end of the body
 scripts:
-- /js/zhl.js
-- /js/bj.js
+- /js/zhl.js 
+- /js/bj.js ##背景动画
