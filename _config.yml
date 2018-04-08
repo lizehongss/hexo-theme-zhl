@@ -8,7 +8,8 @@ menu:
   demo: https://github.com/lizehongss/demo_show
   About: /about
   music: /
-
+# Content 内容显示
+excerpt_link: Read More
 # Sidebar 侧栏分类
 # sidebar 左右
 widgets:

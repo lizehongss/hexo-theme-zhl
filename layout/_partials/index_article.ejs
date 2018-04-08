@@ -1,0 +1,51 @@
+<article> 
+<div class="article-meta">
+	<a href="<%- url_for(post.path) %>">
+	<time datetime="<%= date_xml(post.date) %>">
+		<%= date(post.date) %>
+	</time>
+	</a>
+	<% if(post.categories && post.categories.length){ %>
+	<div class="article-category">
+		<%- list_categories(post.categories,{
+		show_count: false,
+		class: 'article-category',
+		style: 'none',
+		separator: '►'
+	}) %>
+	</div>
+<%　}　%>	
+</div>
+<div class="article-inner">
+	<% if(post.title){ %>
+	<header class="article-header">
+		<h1 itemprop="name">
+		<%= post.title %>
+		</h1>
+	</header>
+	<% } %>
+	<div class="article-entry">
+		<% if(post.excerpt){ %>
+		<%= post.excerpt %>
+		<% if(theme.excerpt_link){ %>
+		<p class="article-more-link">
+			<a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+		</p>
+		<% } %>
+		<% } else { %>
+			<% var br=post.content.indexOf('\n') %>
+			<% if(br<0) { %>
+			<%- post.content %>
+			<% } else{%>
+			<%- post.content.substring(0,br) %>
+			<% if(theme.excerpt_link){ %>
+			<p class="article-more-link">
+			<a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+			</p>
+			<% } %>
+			<% } %>
+			<% } %>
+
+	</div>
+</div>
+</article>
