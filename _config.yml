@@ -18,7 +18,10 @@ widgets:
 
 # widget behavioe
 
-show_count: true ##显示分类文章数目
+show_count: true ##显示分类和归档文章数目
+archive_type: monthly  ##归档类型yearly or monthly
+
+
 # Miscelaneous
 favicon: /favicon.ico
 

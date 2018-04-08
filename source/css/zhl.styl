@@ -1,3 +1,6 @@
+*
+		margin: 0
+		
 vendor(prop,args)
 	-webkit-{prop} args
 	-moz-{prop} args
@@ -23,6 +26,11 @@ vendor(prop,args)
 	align-items:center
 #content-left
 	flex: 2	
+	box-shadow: 10px 10px 5px #888888
+	margin-left: 2em
+	margin-top: 2em
+	width:200px
+	background-color:#444
 #content-right
 	flex:1
 
@@ -54,23 +62,37 @@ vendor(prop,args)
 	font-size 25px
 
 .widget-wrap
-	background-color:#464
-	margin-left: 2em
-	box-shadow: 10px 10px 5px #888888
+	margin-top: 1em
 .widget-title
 	color: #994
-		
+			
 .widget ul
 	list-style: none
+	padding: 0
 .widget ul li
 	border-bottom: 1px solid #000
-	margin-left: -1em
+	padding-top: 1em
+	//margin-left:1em
+	
 .widget ul li a
 	color: #999 
 	text-decoration: none
-.widget ul li span:before
-	content: '(' 
-.widget ul li span:after
-	content: ')'
-.widget ul li span
+.widget ul li:hover
+	text-decoration: none
+	background-color: #ffe
+	cursor:pointer
+// .widget ul li span:before
+// 	content: '(' 
+// .widget ul li span:after
+// 	content: ')'
+ .widget ul li span
 	color: #999
+	float: right
+.tagcloud
+	margin-top: 0.5em	
+.tagcloud a
+	text-decoration none
+.tagcloud a :hover
+	background-color: #1e1a1a
+
+	
