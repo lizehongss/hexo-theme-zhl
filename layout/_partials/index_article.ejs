@@ -1,26 +1,16 @@
 <article> 
 <div class="article-meta">
-	<a href="<%- url_for(post.path) %>">
 	<time datetime="<%= date_xml(post.date) %>">
 		<%= date(post.date) %>
 	</time>
-	</a>
-	<% if(post.categories && post.categories.length){ %>
-	<div class="article-category">
-		<%- list_categories(post.categories,{
-		show_count: false,
-		class: 'article-category',
-		style: 'none',
-		separator: '►'
-	}) %>
-	</div>
-<%　}　%>	
 </div>
 <div class="article-inner">
 	<% if(post.title){ %>
 	<header class="article-header">
 		<h1 itemprop="name">
+		<a href="<%- url_for(post.path) %>">
 		<%= post.title %>
+		</a>
 		</h1>
 	</header>
 	<% } %>
@@ -48,4 +38,14 @@
 
 	</div>
 </div>
+	<% if(post.categories && post.categories.length){ %>
+	<div class="article-category">
+		<%- list_categories(post.categories,{
+		show_count: false,
+		class: 'article-category',
+		style: 'none',
+		separator: '►'
+	}) %>
+	</div>
+<%　}　%>
 </article>

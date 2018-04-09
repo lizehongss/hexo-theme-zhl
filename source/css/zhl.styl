@@ -23,7 +23,7 @@ vendor(prop,args)
 	align-items: center;
 #content
 	display:flex
-	align-items:center
+	align-items:flex-start
 #content-left
 	flex: 1
 	box-shadow: 10px 10px 5px #888888
@@ -33,7 +33,7 @@ vendor(prop,args)
 #content-right
 	flex:4
 	margin-left: 2em
-
+	margin-right: 2em
 #header-left
 	margin-left:2em;
 	order: 1
@@ -95,4 +95,33 @@ vendor(prop,args)
 .tagcloud a :hover
 	background-color: #1e1a1a
 
+article
+	background-color:#444
+	margin-top: 2em
+.article-meta 
+	color: #999
+	margin-top:.1em
 	
+.article-inner
+	margin-top:0.5em
+	border-bottom: 1px solid #ffe
+.article-header h1 a
+	color:#ffe
+	text-decoration: none
+.article-header h1 a:hover
+	color:#999
+.article-entry
+	color: #ffe
+.article-more-link a
+	color: #998
+	vendor(transition,background-color 0.3 ease)
+	text-decoration: none
+.article-more-link a:hover
+	color: #ffe
+	background-color: #1e1a1a
+.article-category-link
+	color: #994
+	text-decoration: none
+	margin-left:.5em
+.article-category a:hover
+	color: #994
