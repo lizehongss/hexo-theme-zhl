@@ -10,6 +10,7 @@ menu:
   music: /
 # Content 内容显示
 excerpt_link: Read More
+excerpt_length: 100
 # Sidebar 侧栏分类
 # sidebar 左右
 widgets:

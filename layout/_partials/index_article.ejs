@@ -1,4 +1,4 @@
-<article> 
+<article class="index-article"> 
 <div class="article-meta">
 	<time datetime="<%= date_xml(post.date) %>">
 		<%= date(post.date) %>
@@ -23,19 +23,14 @@
 		</p>
 		<% } %>
 		<% } else { %>
-			<% var br=post.content.indexOf('\n') %>
-			<% if(br<0) { %>
-			<%- post.content %>
-			<% } else{%>
-			<%- post.content.substring(0,br) %>
+			<% var br=strip_html(post.content) %>
+			<%- truncate(br,{length: theme.excerpt_length})%>
 			<% if(theme.excerpt_link){ %>
 			<p class="article-more-link">
 			<a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
 			</p>
 			<% } %>
 			<% } %>
-			<% } %>
-
 	</div>
 </div>
 	<% if(post.categories && post.categories.length){ %>
