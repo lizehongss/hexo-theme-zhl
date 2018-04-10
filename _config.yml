@@ -23,12 +23,23 @@ widgets:
 show_count: true ##显示分类和归档文章数目
 archive_type: monthly  ##归档类型yearly or monthly
 
+# bottom nav 底部导航 
+# 图标格式可使用https://forkawesome.github.io/Fork-Awesome/icons/查询
+
+social:
+# - url: #
+#   title: #
+#   icon: #
+- url: https://github.com/lizehongss
+  title: Follow me
+  icon: fa-github
 
 # Miscelaneous
 favicon: /favicon.ico
 
 # stylesheets loaded in the <head>
 stylesheets:
+- /css/fork-awesome.min.css ##图标样式
 - /css/zhl.css ## 自定义样式，会覆盖 
 
 # scripts loaded in the end of the body

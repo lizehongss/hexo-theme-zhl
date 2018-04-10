@@ -1,4 +1,11 @@
-<div class="bottom-nav"></div>
+<div class="bottom-nav">
+	<% if(theme.social && theme.social.length){ %>
+	<% theme.social.forEach(function(item) { %>
+	<a href="<%- item.url %>" class="fa <%= item.icon
+	 %>" target="_blank" title="<%= item.title %>" ></a>
+	<% }) %>
+	<% } %>
+</div>
 <div class="bottom-info">
 	&copy; <%= date(new Date(),'YYYY')%> <%= config.author||config.title %><br>
 	<%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
