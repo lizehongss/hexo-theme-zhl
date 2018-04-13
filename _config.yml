@@ -9,13 +9,13 @@ menu:
   icon: fa-home
 - page: demo
   url: https://github.com/lizehongss/demo_show
-  icon: fa-home
+  icon: fa-code
 - page: about
   url: /about
-  icon: fa-home
+  icon: fa-user
 - page: music
   url: /
-  icon: fa-home
+  icon: fa-music
 # Content 内容显示
 excerpt_link: Read More
 excerpt_length: 100

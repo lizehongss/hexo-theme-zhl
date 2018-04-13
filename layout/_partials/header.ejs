@@ -14,7 +14,7 @@
 	<div id="header-right">
 		<% if(theme.menu && theme.menu.length){ %>
 		<% theme.menu.forEach(function(item){ %>
-		<a href="<%- url_for(item.url) %>" class="fa <%= item.icon %> " title="<%= item.page %>"><%= item.page %></a>
+		<a href="<%- url_for(item.url) %>"  title="<%= item.page %>"><i class="fa <%= item.icon %> "><%= item.page %></i></a>
 		<% }) %>
 		<% } %>
 	</div>

@@ -28,7 +28,7 @@ vendor(prop,args)
 	flex: 1
 	margin-left: 2em
 	margin-top: 2em
-	background-color: $color-background
+	border-right: 1px solid #ddd
 #content-right
 	flex:4
 	margin-left: 6em
@@ -44,16 +44,16 @@ vendor(prop,args)
 	text-decoration: none
 	color: $color-a-hover
 #header-right
+	margin-top:2em
 	order: 2
 	flex:1
 #header-right a
+	font-size:18px
 	margin-left: 2em
 	color: $color-a
 	text-decoration: none
-	vendor(transition,background-color 0.3 ease)
 #header-right a:hover
 	color: $color-a-hover
-	background-color: $color-background-d
 #header-title a 
 	font-size: 20px
 	vendor(transition, font-size 0.5s ease-in-out)
