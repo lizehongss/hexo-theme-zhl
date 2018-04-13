@@ -1,8 +1,10 @@
+	<div class="right-content">
 <% page.posts.each(function(post){ %>
 <div class="right-post">
 <%- partial('_partials/index_article',{post: post}) %>
 </div>
 <%　}) %>
+</div>
 <% if(page.total >1){ %>
 <nav id="page-nav">
 	<%　var prev_text="&laquo;" +__('prev'); var next_text=__('next')+"&raquo;"%>

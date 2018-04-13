@@ -12,8 +12,10 @@
 		<%}%>
 	</div>
 	<div id="header-right">
-		<% for(var i in theme.menu){ %>
-		<a href="<%- url_for(theme.menu[i]) %>" c><%= i %></a>
+		<% if(theme.menu && theme.menu.length){ %>
+		<% theme.menu.forEach(function(item){ %>
+		<a href="<%- url_for(item.url) %>" class="fa <%= item.icon %> " title="<%= item.page %>"><%= item.page %></a>
+		<% }) %>
 		<% } %>
 	</div>
 </div>

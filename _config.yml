@@ -4,10 +4,18 @@ language: en
 
 # main menu navigation 导航菜单显示
 menu:
-  Home: /
-  demo: https://github.com/lizehongss/demo_show
-  About: /about
-  music: /
+- page: home
+  url: /
+  icon: fa-home
+- page: demo
+  url: https://github.com/lizehongss/demo_show
+  icon: fa-home
+- page: about
+  url: /about
+  icon: fa-home
+- page: music
+  url: /
+  icon: fa-home
 # Content 内容显示
 excerpt_link: Read More
 excerpt_length: 100
@@ -15,7 +23,7 @@ excerpt_length: 100
 # sidebar 左右
 widgets:
 - category ##文章分类
-- tagcloud ##标签 
+- tag ##标签 
 - archives ##文章归档
 
 # widget behavioe
