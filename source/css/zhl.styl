@@ -31,8 +31,6 @@ vendor(prop,args)
 	border-right: 1px solid #ddd
 #content-right
 	flex:4
-	margin-left: 6em
-	margin-right: 6em
 #header-left
 	margin-left:2em
 	order: 1
@@ -48,17 +46,18 @@ vendor(prop,args)
 	order: 2
 	flex:1
 #header-right a
-	font-size:18px
+	font-size:1.1rem
 	margin-left: 2em
 	color: $color-a
 	text-decoration: none
 #header-right a:hover
 	color: $color-a-hover
 #header-title a 
-	font-size: 20px
+	font-size: 1.5rem
+	
 	vendor(transition, font-size 0.5s ease-in-out)
 #header-title a:hover
-	font-size 25px
+	font-size 2rem
 
 .widget-wrap
 	margin-top: 1em
@@ -102,10 +101,12 @@ vendor(prop,args)
 	cursor:pointer
 	color: $color-a-hover
 
-.right-content:
+.right-content
 	display: flex
-	width:100%
-
+	flex-direction:column
+	align-items:center
+.right-post
+	width:80%
 .index-article
 	background-color:$color-background
 	margin-top: 2em
@@ -173,3 +174,27 @@ vendor(prop,args)
 .bottom-info
 	margin-right:2em
 
+#category
+	width:100%
+	display:flex
+	flex-direction:column
+	align-items:center
+#category h2
+	font-size:1.5rem
+	color:$color-article-title
+	margin-bottom:2em
+.category-item
+	width:70%
+	margin-top:1.5em
+	text-decoration:none
+	display:flex
+	justify-content:space-between
+	border-bottom: 1px solid #ddd
+.category-item:hover
+	border-bottom:1px solid #fff
+.category-item span
+	color: #6E7173
+	font-size:1rem
+.category-item time
+	color:$color-a
+	
