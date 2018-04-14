@@ -1,22 +1,29 @@
 
 <div id="tag">
-  <h1><%=page.tag%></h1>
+  <h2>标签：<%=page.tag%></h2>
   <% page.posts.each(function(article) { %>
-    <div class="tag-item">
-      <% if (article.link) { %>
-        <a href="<%=url_for(article.link)%>" target="_blank">
+           <% if (article.link) { %>
+    <a href="<%= url_for(article.link) %>" target="_blank" class="tag-item">
+        <span>
           <%=article.title || 'No Title'%>
-        </a>
-      <% } else { %>
-        <a href="<%=url_for(article.link)%>">
-          <%=article.title || 'No Title'%>
-        </a>
-      <% } %>
+        </span> 
       <time datetime="<%=date_xml(article.date)%>">
         <%=date(article.date)%>
       </time>
-    </div>
+    </a>
+    <% }else { %>
+        <a href="<%=url_for(article.path)%>" taget="_blank" class="tag-item">
+        <span>
+          <%=article.title || 'No Title'%>
+        </span>
+        <time datetime="<%=date_xml(article.date)%>">
+          <%=date(article.date)%>
+        </time>
+        </a>
+      <% } %>
   <% }); %>
+  <%　if(page.total >1 ){ %>
+<%- partial('_partials/my_paginator') %>
+<% } %>
 </div>
 
-<%-paginator()%>

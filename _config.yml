@@ -29,7 +29,7 @@ widgets:
 # widget behavioe
 
 show_count: true ##显示分类和归档文章数目
-archive_type: monthly  ##归档类型yearly or monthly
+archive_type: yearly  ##归档类型yearly or monthly
 
 # bottom nav 底部导航 
 # 图标格式可使用https://forkawesome.github.io/Fork-Awesome/icons/查询

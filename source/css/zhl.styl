@@ -174,27 +174,28 @@ vendor(prop,args)
 .bottom-info
 	margin-right:2em
 
-#category
+#category,#tag,#archive
 	width:100%
 	display:flex
 	flex-direction:column
 	align-items:center
-#category h2
+#category h2,#tag h2,#archive h2
 	font-size:1.5rem
 	color:$color-article-title
 	margin-bottom:2em
-.category-item
+.category-item,.tag-item,.archive-item
 	width:70%
-	margin-top:1.5em
+	margin-top:2em
 	text-decoration:none
 	display:flex
 	justify-content:space-between
 	border-bottom: 1px solid #ddd
-.category-item:hover
+.category-item:hover,.tag-item:hover,.archive-item:hover
 	border-bottom:1px solid #fff
-.category-item span
+.category-item span, .tag-item span,.archive-item span
 	color: #6E7173
 	font-size:1rem
-.category-item time
+.category-item time, .tag-item time,.archive-item time
 	color:$color-a
+
 	
