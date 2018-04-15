@@ -6,7 +6,10 @@ vendor(prop,args)
 	-moz-{prop} args
 	{prop} args
 
-
+.fixed
+	position: fixed
+	height: 2rem
+	top:0
 .bg_content
 	position:fixed
 	top:0
@@ -22,6 +25,8 @@ vendor(prop,args)
 	display:flex
 	align-items: center
 	justify-content:space-between
+	border-bottom: 1px solid #ddd
+	background-color:#fff
 #content
 	display:flex
 	align-items:flex-start
@@ -42,7 +47,6 @@ vendor(prop,args)
 	text-decoration: none
 	color: $color-a-hover
 #header-right
-	margin-top:2em
 	order: 2
 	margin-right: 2em
 #header-right a
