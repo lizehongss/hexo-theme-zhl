@@ -28,15 +28,16 @@ vendor(prop,args)
 	border-bottom: 1px solid #ddd
 	background-color:#fff
 #content
+	width:100%
 	display:flex
 	align-items:flex-start
 #content-left
-	width:25%
+	width:20%
 	margin-left: 2em
 	margin-top: 2em
 	border-right: 1px solid #ddd
 #content-right
-	width:75%
+	width:80%
 #header-left
 	margin-left:2em
 	order: 1
@@ -202,4 +203,21 @@ vendor(prop,args)
 .category-item time, .tag-item time,.archive-item time
 	color:$color-a
 
-	
+#tool
+	position:fixed
+	z-index: 9999
+	bottom:0.5rem
+	right:1.5rem
+#tool ul
+	padding:0
+#tool li
+	cursor:pointer
+	width:35px
+	height:35px
+	background-color:#666666
+	border-radius:2px
+	line-height:33px
+	text-align:center
+	font-size:40px
+.top
+	display:none
