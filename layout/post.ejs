@@ -1,7 +1,29 @@
 
 <article id="post">
+	<div class="post-title">
   <h1><%=page.title%></h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta"><%- date(page.date) %></span>
+  	</span>
+  	<span class="fa-wrap">
+  		<% if(page.tags && page.tags.length > 0 && page.tags.data[0] && page.tags.data[0].name){%>
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta"><%= page.tags.data[0].name%></span>
+  		<% } %>
+  	</span>
+  	<span class="fa-wrap">
+  		<% if(page.categories && page.categories.length>0 && page.categories.data[0].name){ %>
+  		<i class="fa fa-th"></i>
+  		<span class="categories-meta"><%= page.categories.data[0].name%></span>
+  		<% } %>
+  	</span>
+  </div>
+  <div class="post-content">
   <%-page.content%>
+	</div>
 </article>
 
 <%-paginator()%>
