@@ -1,11 +1,20 @@
-@import "./reset.styl"
-@import "./varible.styl"
-@import "./fa.styl"
+
 vendor(prop,args)
 	-webkit-{prop} args
 	-moz-{prop} args
 	{prop} args
 
+@import "./reset.styl"
+@import "./varible.styl"
+@import "./fa.styl"
+@import "./widget.styl"
+@import "./index-article.styl"
+@import "./header.styl"
+@import "./car-tag-arc.styl"
+@import "./tool.styl"
+@import "./post.styl"
+@import "./page-nav.styl"
+@import "./bottom.styl"
 .fixed
 	position: fixed
 	height: 2rem
@@ -38,212 +47,21 @@ vendor(prop,args)
 	border-right: 1px solid #ddd
 #content-right
 	width:80%
-#header-left
-	margin-left:2em
-	order: 1
-#header-title a
-	color: $color-a
-	text-decoration: none
-#header-title a:hover
-	text-decoration: none
-	color: $color-a-hover
-#header-right
-	order: 2
-	margin-right: 2em
-#header-right a
-	font-size:1.1rem
-	margin-left: 2em
-	color: $color-a
-	text-decoration: none
-#header-right a:hover
-	color: $color-a-hover
-#header-title a 
-	font-size: 1.5rem
+
+
+@media (max-width:768px)
+	#header-right
+		display:none
+	#content-left
+		display:none
+	#content-right
+		width:100%
+
 	
-	vendor(transition, font-size 0.5s ease-in-out)
-#header-title a:hover
-	font-size 2rem
 
-.widget-wrap
-	margin-top: 1em
-.widget-title
-	color: $color-widget-title
-			
-.widget ul
-	list-style: none
-	padding: 0
-.widget ul li
-	
-	padding-top: 1em
-	//margin-left:1em
-	
-.widget ul li a
-	color: $color-a
-	text-decoration: none
-.widget ul li a:hover + span,.widget ul li a:hover
-	text-decoration: none
-	cursor:pointer
-	color: $color-a-hover
-.widget ul li span:before
-	content: '(' 
-.widget ul li span:after
-	content: ')'
- .widget ul li span
-	color: $color-a
-.tags
-	margin-top: 0.5em	
-.tags a
-	display:inline-block
-	margin-top: .5em
-	text-decoration: none
-	color: $color-a
-.tags a span:before
-	content: '('
-.tags a span:after
-	content: ')'
-.tags a:hover + span,.tags a:hover
-	text-decoration: none
-	cursor:pointer
-	color: $color-a-hover
 
-.right-content
-	display: flex
-	flex-direction:column
-	align-items:center
-.right-post
-	width:80%
-.index-article
-	background-color:$color-background
-	margin-top: 2em
-	box-shadow: 10px 10px 5px #888
-.article-meta 
-	color: $color-a
-	margin-top:.1em
-	margin-left: 1em
-.article-inner
-	margin-top:0.5em
-	border-bottom: 1px solid #ddd
-	padding-left: 1em
-.article-header h1 a
-	color:$color-article-title
-	text-decoration: none
-.article-header h1 a:hover
-	color:$color-article-title-hover
-.article-entry
-	color: $color-text
-.article-more-link a
-	color: $color-a
-	text-decoration: none
-	border: 1px solid #ddd
-	border-radius:5px
-.article-more-link a:hover
-	color: $color-a-hover
-	background: #F8F8F8;
-.article-category-link
-	color: $color-category
-	text-decoration: none
-	margin-left: 1em
-.article-category a:hover
-	color: $color-category-hover
-	
-#page-nav
-	display: flex
-	justify-content: center
-	margin-top: .5em
-#page-nav .page-number,#page-nav .extend
-	display:inline-block
-	width:2em
-	height:2em
-	margin-left: 1em
-	text-align: center
-	line-height:30px
-#page-nav .current
-	background-color: $color-background
 
-#page-nav a
-	text-decoration:none
-	color:$color-a
-#page-nav a:hover
-	color:$color-a-hover
-	background-color: #fff
 
-#bottom
-	border-top: 1px solid #fff
-	margin-top: 2em
-	display:flex
-	justify-content: center
-.bottom-nav
-	color:#ffe
-	margin-bottom:1em
-	margin-right: 2em
-.bottom-info
-	margin-right:2em
 
-#category,#tag,#archive
-	width:100%
-	display:flex
-	flex-direction:column
-	align-items:center
-#category h2,#tag h2,#archive h2
-	font-size:1.5rem
-	color:$color-article-title
-	margin-bottom:2em
-.category-item,.tag-item,.archive-item
-	width:70%
-	margin-top:2em
-	text-decoration:none
-	display:flex
-	justify-content:space-between
-	border-bottom: 1px solid #ddd
-.category-item:hover,.tag-item:hover,.archive-item:hover
-	border-bottom:1px solid #fff
-.category-item span, .tag-item span,.archive-item span
-	color: #6E7173
-	font-size:1rem
-.category-item time, .tag-item time,.archive-item time
-	color:$color-a
 
-#tool
-	position:fixed
-	z-index: 9999
-	bottom:0.5rem
-	right:1.5rem
-#tool ul
-	padding:0
-#tool li
-	cursor:pointer
-	width:35px
-	height:35px
-	background-color:#666666
-	border-radius:2px
-	line-height:33px
-	text-align:center
-	font-size:40px
-.top
-	display:none
 
-.page-meta .fa-wrap
-	margin-left: 1rem
-	color: #6E7173
-#post .post-title
-	color:#555
-	font-size:1.3rem
-	margin-left: 1rem
-#post .post-content
-	color:#444
-	margin-left:1rem
-	& h1
-		font-size: 1.3rem
-	& ul li
-		list-style: none
-figure
-	background-color:#f7f8f8
-	margin: 0
-.gutter
-	background-color:#eff2f3
-	color: #869194
-	padding-left: 10px
-	padding-right: 10px
-	text-align: right
-.line
-	font-size:1rem
