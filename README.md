@@ -12,9 +12,8 @@
 - [ ] 评论功能
 - [ ] 支持IE9
 - [ ] 作品页面
-# Getting Started
-
-###　Dependencies
+## Getting Started
+### Dependencies
 ```
 npm install 
 "dependencies": {
@@ -35,10 +34,11 @@ npm install
     "hexo-server": "^0.2.2"
   }
 ```
-###　Download
+### Download
+
 1. 下载*.zip文件
 2. 通过git
-安装目录如下：
+- 安装目录如下：
 ```
  .
     ├── landscape
@@ -63,3 +63,6 @@ npm install
 ### 布局参考
 - [Hux Blog](https://huangxuan.me/)
 - [屠城](https://www.haomwei.com/)
+
+## License
+[MIT](https://github.com/lizehongss/hexo-theme-zhl/blob/master/LICENSE)
